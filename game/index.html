@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>游戏工坊 - 小游戏作品展示</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Press+Start+2P&display=swap">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="/css/styles.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- 星空背景 -->
+    <div class="stars" id="stars"></div>
+    
+    <!-- 粒子背景 -->
+    <div id="particles-js"></div>
+    
+    <!-- 页面内容 -->
+    <div class="page active">...</div>
+    
+    <!-- 自定义光标 -->
+    <!--<div class="cursor"></div>
+    <div class="cursor-follower"></div> -->
+
+
+
+
+
+    
+    <!-- 导航栏 -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo" onclick="showPage('home')">
+                    <img src="./images/tuziLogo.png" alt="游戏工坊" class="logo-img">
+                </a>
+                <div class="menu-toggle" id="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="#" class="active" onclick="showPage('home')">首页</a></li>
+                    <li><a href="#" onclick="showPage('games')">游戏项目</a></li>
+                    <li><a href="#" onclick="showPage('club')">俱乐部</a></li>
+                    <li><a href="#" onclick="showPage('news')">活动资讯</a></li>
+                    <li><a href="#" onclick="showPage('about')">关于我们</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 首页 -->
+    <section id="home" class="page active">
+        <div class="hero">
+            <div class="hero-content">
+                <img src="./images/biaoti.png" class="hero-logo" alt="网站Logo">
+                <h1>创造无限可能</h1>
+                <p>探索我们精心设计的HTML5小游戏合集，感受指尖上的创意与乐趣</p>
+                <a href="#" class="btn" onclick="showPage('games')">
+                    浏览游戏 <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="#" class="btn btn-outline" onclick="showPage('club')">
+                    加入俱乐部 <i class="fas fa-users"></i>
+                </a>
+            </div>
+            <div class="scroll-indicator">
+                <!-- 用<a>标签实现跳转 -->
+                <a href="#next-section" class="scroll-indicator">
+                    <img src="./images/shubiao.svg" alt="滚动图标" class="custom-icon">
+                    <span>滚动探索</span>
+                </a>
+            </div>
+        </div>
+
+ 
+
+
+        <div class="games-section" id="games-section">
+            <div class="container">
+                <div class="image-with-title">
+                    <!-- 图片层 -->
+                    <img src="./images/logoshuiyin.png" alt="游戏背景" class="title-background">
+
+                    <!-- 复用原有标题类 -->
+                    <h2 class="section-title">游戏项目展示</h2>
+                    <a href="#" class="games-btn" onclick="showPage('games')">查看更多 >></a>
+                </div>
+
+                
+                
+                <div class="games-grid">
+                    <!-- 游戏卡片1 -->
+                        <div class="game-image" onclick="showGameDetail('space-odyssey')" style="background: url('./images/1dims.jpg') center/cover;">
+                            <div class="game-info">
+                                <span class="game-title">太空漫游</span>
+                                <span class="label-glass">New</span>
+                            </div>
+                            <p class="game-description">
+                                <span class="game-title">《丛林跳跃》</span>
+                                <span class="game-text">在浩瀚宇宙中探索未知星系，躲避陨石，收集能量晶体</span>
+                                <a href="#" class="btn btn-outline">查看详情</a>
+                            </p>
+                        </div>   
+                    
+                    <!-- 游戏卡片2 -->
+                        <div class="game-image" onclick="showGameDetail('jungle-jump')" style="background: url('./images/2dims.jpg') center/cover;">
+                            <div class="game-info">
+                                <span class="game-title">太空漫游</span>
+                                <span class="label-glass">New</span>
+                            </div>
+                            <p class="game-description">
+                                <span class="game-title">《丛林跳跃》</span>
+                                <span class="game-text">在浩瀚宇宙中探索未知星系，躲避陨石，收集能量晶体</span>
+                                <a href="#" class="btn btn-outline">查看详情</a>
+                            </p>
+                        </div>
+                    
+                    <!-- 游戏卡片3 -->
+                        <div class="game-image" onclick="showGameDetail('puzzle-master')" style="background: url('./images/3dims.jpg') center/cover;">
+                            <div class="game-info">
+                                <span class="game-title">太空漫游</span>
+                                <span class="label-glass">New</span>
+                            </div>
+                            <p class="game-description">
+                                <span class="game-title">《丛林跳跃》</span>
+                                <span class="game-text">在浩瀚宇宙中探索未知星系，躲避陨石，收集能量晶体</span>
+                                <a href="#" class="btn btn-outline">查看详情</a>
+                            </p>
+                        </div>
+
+                    <!-- 游戏卡片4 -->
+
+                        <div class="game-image" onclick="showGameDetail('kingdom-rush')" style="background: url('./images/4dims.jpg') center/cover;">
+                            <div class="game-info">
+                                <span class="game-title">太空漫游</span>
+                                <span class="label-glass">New</span>
+                            </div>
+                            <p class="game-description">
+                                <span class="game-title">《丛林跳跃》</span>
+                                <span class="game-text">在浩瀚宇宙中探索未知星系，躲避陨石，收集能量晶体</span>
+                                <a href="#" class="btn btn-outline">查看详情</a>
+                            </p>
+                        </div>
+
+                    
+                    <!-- 游戏卡片5 -->
+
+                        <div class="game-image" onclick="showGameDetail('racing-fever')" style="background: url('./images/5dims.jpg') center/cover;">
+                            <div class="game-info">
+                                <span class="game-title">太空漫游</span>
+                                <span class="label-glass">New</span>
+                            </div>
+                            <p class="game-description">
+                                <span class="game-title">《丛林跳跃》</span>
+                                <span class="game-text">在浩瀚宇宙中探索未知星系，躲避陨石，收集能量晶体</span>
+                                <a href="#" class="btn btn-outline">查看详情</a>
+                            </p>
+                        </div>
+                    
+                    <!-- 游戏卡片6 -->
+
+                        <div class="game-image" onclick="showGameDetail('bubble-shooter')" style="background: url('./images/6dims.jpg') center/cover;">
+                            <div class="game-info">
+                                <span class="game-title">太空漫游</span>
+                                <span class="label-glass">New</span>
+                            </div>                            
+                            <p class="game-description">
+                                <span class="game-title">《丛林跳跃》</span>
+                                <span class="game-text">在浩瀚宇宙中探索未知星系，躲避陨石，收集能量晶体</span>
+                                <a href="#" class="btn btn-outline">查看详情</a>
+                            </p>
+                        </div>
+                    
+                    <!-- 游戏卡片7 -->
+
+                        <div class="game-image" onclick="showGameDetail('magic-tower')" style="background: url('./images/7dims.jpg') center/cover;">
+                            <div class="game-info">
+                                <span class="game-title">太空漫游</span>
+                                <span class="label-glass">New</span>
+                            </div>                            
+                            <p class="game-description">
+                                <span class="game-title">《丛林跳跃》</span>
+                                <span class="game-text">在浩瀚宇宙中探索未知星系，躲避陨石，收集能量晶体</span>
+                                <a href="#" class="btn btn-outline">查看详情</a>
+                            </p>
+                        </div>
+
+
+                    
+                    <!-- 游戏卡片8 -->
+                        <div class="game-image" onclick="showGameDetail('dragon-arena')" style="background: url('./images/8dims.jpg') center/cover;">
+                            <div class="game-info">
+                                <span class="game-title">太空漫游</span>
+                                <span class="label-glass">New</span>
+                            </div>                            
+                            <p class="game-description">
+                                <span class="game-title">《丛林跳跃》</span>
+                                <span class="game-text">在浩瀚宇宙中探索未知星系，躲避陨石，收集能量晶体</span>
+                                <a href="#" class="btn btn-outline">查看详情</a>
+                            </p>
+                        </div>
+
+                    
+                    <!-- 游戏卡片9 -->
+
+                        <div class="game-image" onclick="showGameDetail('pixel-quest')" style="background: url('./images/9dims.jpg') center/cover;">
+                            <div class="game-info">
+                                <span class="game-title">太空漫游</span>
+                                <span class="label-glass">New</span>
+                            </div>                            
+                            <p class="game-description">
+                                <span class="game-title">《丛林跳跃》</span>
+                                <span class="game-text">在浩瀚宇宙中探索未知星系，躲避陨石，收集能量晶体</span>
+                                <a href="#" class="btn btn-outline">查看详情</a>
+                            </p>
+                        </div>
+
+
+                    
+                    <!-- 查看更多卡片 -->
+                    <div class="view-more-card" onclick="showPage('games')">
+                        <i class="fas fa-arrow-circle-right"></i>
+                        <h3>查看更多游戏</h3>
+                        <p>探索更多精彩的游戏作品</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- 游戏库页面 -->
+    <section id="games" class="page">
+        <!-- 新增横向底板 -->
+        <div class="full-width-base">   
+            <!-- 主内容区 -->
+            <div class="games-content">
+                <!-- 主图区 -->
+                <div class="image-container">
+                    <img src="./images/8dims.jpg" 
+                        alt="游戏主视觉图" 
+                        class="hero-image"
+                        id="games-hero-image"
+                        loading="lazy">
+                    <div class="image-caption" >
+                        <div class="game-image-title" id="games-caption">太空漫游</div>
+                        <div class="creator-info"> <!-- 开发者信息和浏览量容器 -->
+                            <div class="creator">
+                                <img src="./images/kaifazhe.jpg" alt="开发者头像" class="creator-avatar" id="creator-avatar">
+                                <span class="studio-name" id="studio-name">银与绯工作室</span>
+                            </div>
+                            <span class="view-count" id="view-count">23.6万浏览</span>
+                        </div>
+                        <div class="game-description1" id="game-description1">在浩瀚宇宙中探索未知星系，躲避陨石，收集能量晶体在浩瀚宇宙中探索未知星系，躲避陨石，收集能量晶体</div>
+
+                    </div>
+                </div>
+
+                <!-- 右侧推荐栏 -->
+                <aside class="recommendations">
+                    <div class="image-with-title1">
+                        <!-- 图片层 -->
+                        <img src="./images/biaotimaisui.png" alt="游戏背景" class="title-background1">
+
+                        <!-- 复用原有标题类 -->
+                        <h2 class="section-title1">精品推荐</h2>
+                    </div>
+
+                    <ul class="game-list">
+                        <li onmouseover="switchMainContent(
+                            'space-odyssey', 
+                            '太空漫游', 
+                            './images/8dims.jpg', 
+                            './images/kaifazhe.jpg', 
+                            '魂球工作室', 
+                            '99.6万浏览',
+                            '在浩瀚宇宙中探索未知星系，躲避陨石，收集能量晶体在浩瀚宇宙中探索未知星系，躲避陨石，收集能量晶体')">
+                            <a href="#">
+                                <img src="./images/8dims.jpg" 
+                                    alt="太空漫游缩略图"
+                                    loading="lazy">
+                                <div class="game-info1">
+                                    <h4>太空漫游</h4>
+                                    <p>在浩瀚宇宙中探索未知星系</p>
+                                </div>
+                                <span class="tag-new">NEW</span>
+                            </a>
+                        </li>
+                        <li onmouseover="switchMainContent('jungle-jump', '《丛林跳跃》', 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80')">
+                            <a href="#">
+                                <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                                    alt="丛林跳跃缩略图"
+                                    loading="lazy">
+                                <div class="game-info1">
+                                    <h4>丛林跳跃</h4>
+                                    <p>扮演敏捷的猴子在丛林中跳跃</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li onmouseover="switchMainContent('puzzle-master', '《解谜大师》', 'https://images.unsplash.com/photo-1552820728-8b83bb6b773f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80')">
+                            <a href="#">
+                                <img src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                                    alt="解谜大师缩略图"
+                                    loading="lazy">
+                                <div class="game-info1">
+                                    <h4>解谜大师</h4>
+                                    <p>挑战你的逻辑思维能力子在丛</p>
+                                </div>
+                            </a>
+                        </li>
+
+                    </ul>
+                </aside>
+            </div>
+
+
+
+        </div>
+
+        <!-- 游戏分类筛选 -->
+        <div class="games-filter">
+            <div class="filter-header">   <!--解开下列搜索，需要解开js文件中的《//游戏搜索功能》-->
+                <div class="categories" id="game-categories">
+                <!--<div class="category-btn active" data-category="all">全部</div>     
+                    <div class="category-btn" data-category="休闲">休闲</div>
+                    <div class="category-btn" data-category="动作">动作</div>
+                    <div class="category-btn" data-category="益智">益智</div>
+                    <div class="category-btn" data-category="策略">策略</div>
+                    <div class="category-btn" data-category="竞速">竞速</div>
+                    <div class="category-btn" data-category="RPG">RPG</div>
+                    <div class="category-btn" data-category="探险">探险</div>
+                    <div class="category-btn" data-category="模拟">模拟</div>
+                    <div class="category-btn" data-category="教育">教育</div>
+                    <div class="category-btn" data-category="竞技">竞技</div> 
+                </div>
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="game-search" placeholder="搜索游戏...">
+                </div>-->
+            </div>
+        </div>
+        
+
+        <div class="games-section" id="games-section">
+            <div class="container">
+                <div class="image-with-title">
+                    <!-- 图片层 -->
+                    <img src="./images/logoshuiyin.png" alt="游戏背景" class="title-background">
+
+                    <!-- 复用原有标题类 -->
+                    <h2 class="section-title">游戏项目展示</h2>
+                </div>
+
+                
+                
+                <div class="games-grid" id=“games-list”>
+                    <!-- 游戏卡片1 -->
+                        <div class="game-image" onclick="showGameDetail('space-odyssey')" style="background: url('./images/1dims.jpg') center/cover;">
+                            <div class="game-info">
+                                <span class="game-title">太空漫游</span>
+                                <span class="label-glass">New</span>
+                            </div>
+                            <p class="game-description">
+                                <span class="game-title">《丛林跳跃》</span>
+                                <span class="game-text">在浩瀚宇宙中探索未知星系，躲避陨石，收集能量晶体</span>
+                                <a href="#" class="btn btn-outline">查看详情</a>
+                            </p>
+                        </div>   
+                    
+                    <!-- 游戏卡片2 -->
+                        <div class="game-image" onclick="showGameDetail('jungle-jump')" style="background: url('./images/2dims.jpg') center/cover;">
+                            <div class="game-info">
+                                <span class="game-title">太空漫游</span>
+                                <span class="label-glass">New</span>
+                            </div>
+                            <p class="game-description">
+                                <span class="game-title">《丛林跳跃》</span>
+                                <span class="game-text">在浩瀚宇宙中探索未知星系，躲避陨石，收集能量晶体</span>
+                                <a href="#" class="btn btn-outline">查看详情</a>
+                            </p>
+                        </div>
+                    
+                    <!-- 游戏卡片3 -->
+                        <div class="game-image" onclick="showGameDetail('puzzle-master')" style="background: url('./images/3dims.jpg') center/cover;">
+                            <div class="game-info">
+                                <span class="game-title">太空漫游</span>
+                                <span class="label-glass">New</span>
+                            </div>
+                            <p class="game-description">
+                                <span class="game-title">《丛林跳跃》</span>
+                                <span class="game-text">在浩瀚宇宙中探索未知星系，躲避陨石，收集能量晶体</span>
+                                <a href="#" class="btn btn-outline">查看详情</a>
+                            </p>
+                        </div>
+
+                    <!-- 游戏卡片4 -->
+
+                        <div class="game-image" onclick="showGameDetail('kingdom-rush')" style="background: url('./images/4dims.jpg') center/cover;">
+                            <div class="game-info">
+                                <span class="game-title">太空漫游</span>
+                                <span class="label-glass">New</span>
+                            </div>
+                            <p class="game-description">
+                                <span class="game-title">《丛林跳跃》</span>
+                                <span class="game-text">在浩瀚宇宙中探索未知星系，躲避陨石，收集能量晶体</span>
+                                <a href="#" class="btn btn-outline">查看详情</a>
+                            </p>
+                        </div>
+
+                    
+                    <!-- 游戏卡片5 -->
+
+                        <div class="game-image" onclick="showGameDetail('racing-fever')" style="background: url('./images/5dims.jpg') center/cover;">
+                            <div class="game-info">
+                                <span class="game-title">太空漫游</span>
+                                <span class="label-glass">New</span>
+                            </div>
+                            <p class="game-description">
+                                <span class="game-title">《丛林跳跃》</span>
+                                <span class="game-text">在浩瀚宇宙中探索未知星系，躲避陨石，收集能量晶体</span>
+                                <a href="#" class="btn btn-outline">查看详情</a>
+                            </p>
+                        </div>
+                    
+                    <!-- 游戏卡片6 -->
+
+                        <div class="game-image" onclick="showGameDetail('bubble-shooter')" style="background: url('./images/6dims.jpg') center/cover;">
+                            <div class="game-info">
+                                <span class="game-title">太空漫游</span>
+                                <span class="label-glass">New</span>
+                            </div>                            
+                            <p class="game-description">
+                                <span class="game-title">《丛林跳跃》</span>
+                                <span class="game-text">在浩瀚宇宙中探索未知星系，躲避陨石，收集能量晶体</span>
+                                <a href="#" class="btn btn-outline">查看详情</a>
+                            </p>
+                        </div>
+                    
+                    <!-- 游戏卡片7 -->
+
+                        <div class="game-image" onclick="showGameDetail('magic-tower')" style="background: url('./images/7dims.jpg') center/cover;">
+                            <div class="game-info">
+                                <span class="game-title">太空漫游</span>
+                                <span class="label-glass">New</span>
+                            </div>                            
+                            <p class="game-description">
+                                <span class="game-title">《丛林跳跃》</span>
+                                <span class="game-text">在浩瀚宇宙中探索未知星系，躲避陨石，收集能量晶体</span>
+                                <a href="#" class="btn btn-outline">查看详情</a>
+                            </p>
+                        </div>
+
+
+                    
+                    <!-- 游戏卡片8 -->
+                        <div class="game-image" onclick="showGameDetail('dragon-arena')" style="background: url('./images/8dims.jpg') center/cover;">
+                            <div class="game-info">
+                                <span class="game-title">太空漫游</span>
+                                <span class="label-glass">New</span>
+                            </div>                            
+                            <p class="game-description">
+                                <span class="game-title">《丛林跳跃》</span>
+                                <span class="game-text">在浩瀚宇宙中探索未知星系，躲避陨石，收集能量晶体</span>
+                                <a href="#" class="btn btn-outline">查看详情</a>
+                            </p>
+                        </div>
+
+                    
+                    <!-- 游戏卡片9 -->
+
+                        <div class="game-image" onclick="showGameDetail('pixel-quest')" style="background: url('./images/9dims.jpg') center/cover;">
+                            <div class="game-info">
+                                <span class="game-title">太空漫游</span>
+                                <span class="label-glass">New</span>
+                            </div>                            
+                            <p class="game-description">
+                                <span class="game-title">《丛林跳跃》</span>
+                                <span class="game-text">在浩瀚宇宙中探索未知星系，躲避陨石，收集能量晶体</span>
+                                <a href="#" class="btn btn-outline">查看详情</a>
+                            </p>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- 俱乐部页面 -->
+    <section id="club" class="page">
+        <div class="club-hero">
+            <div class="club-hero-content">
+                <img src="./images/yingdi.png" class="club-hero-logo" alt="网站Logo">
+                <p>针对策划、程序、美术多个维度提供具体问题解决方案，全程跟进项目迭代效果，降低创业痛感，感受创意与乐趣</p>
+                <a href="#" class="club-btn" onclick="showPage('club')">
+                    加入俱乐部 <i class="fas fa-users"></i>
+                </a>
+            </div>
+        </div>
+
+
+        <div class="games-section">
+            <div class="container">
+                <div class="image-with-title">
+                    <!-- 图片层 -->
+                    <img src="./images/logoshuiyin.png" alt="游戏背景" class="title-background">
+
+                    <!-- 复用原有标题类 -->
+                    <h2 class="section-title">开发者俱乐部</h2>
+                </div>
+                
+                <div class="page-content">
+                    <p style="margin-bottom: 20px; line-height: 1.8; font-size: 1.1rem;">
+                        游戏工坊俱乐部是一个专为休闲游戏开发者打造的平台。无论你是程序员、美术设计师、游戏策划还是音效师，这里都能找到志同道合的伙伴。我们提供组队平台、资源共享、经验交流和项目展示空间，帮助你完成属于自己的小游戏作品。
+                    </p>
+                    
+                    <div class="club-features">
+                        <div class="feature-card">
+                            <i class="fas fa-users"></i>
+                            <h3>团队组建</h3>
+                            <p>根据你的技能和兴趣，匹配最适合的团队成员，组建高效协作的游戏开发小组。</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-tools"></i>
+                            <h3>资源共享</h3>
+                            <p>获取免费的游戏开发资源库，包括美术素材、音效库和代码模板，加速开发进程。</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                            <h3>经验交流</h3>
+                            <p>定期举办线上/线下交流活动，与行业专家互动，学习最新技术和设计理念。</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-trophy"></i>
+                            <h3>作品展示</h3>
+                            <p>将你的游戏作品展示给俱乐部成员和潜在玩家，获得有价值的反馈和推广机会。</p>
+                        </div>
+                    </div>
+                    
+                    <div style="text-align: center; margin-top: 50px;">
+                        <a href="#" class="btn" style="font-size: 1.2rem; padding: 15px 40px;">
+                            立即加入俱乐部 <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 活动页面 -->
+    <section id="news" class="page">
+        <div class="games-section">
+            <div class="container">
+        
+                <div style="background: url('./images/newsBg.png'); padding: 15px 10px 20px 10px; border-radius: 15px; margin-bottom: -10px; margin-top: -50px; box-shadow: var(--shadow);">
+                    <h3 style="text-align: center;font-size: 2.8rem; color: var(--dark); margin-bottom: 5px;">游戏行业最新动态</h3>
+                    <p style="text-align: center; color: var(--dark);">获取HTML5游戏开发趋势、技术分享和市场分析，掌握行业前沿信息</p>
+                </div>
+                
+                <div class="news-container">
+                    <div class="featured-news">
+                        <div class="featured-image" style="background: url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80') center/cover;"></div>
+                        <div class="featured-content">
+                            <span class="featured-date">2023-10-15</span>
+                            <h3 class="featured-title">HTML5游戏市场迎来爆发式增长</h3>
+                            <p class="featured-excerpt">最新行业报告显示，2023年HTML5游戏市场规模同比增长35%，轻量级游戏成为市场新宠。随着移动设备性能的提升和5G网络的普及，HTML5游戏在跨平台兼容性和即时游玩体验上的优势日益凸显，吸引了大量休闲玩家和开发者加入这一领域。</p>
+                            <a href="#" class="btn" onclick="showArticle('article1')">阅读全文</a>
+                        </div>
+                    </div>
+                    
+                    <div class="news-list">
+                        <div class="image-with-title1">
+                            <!-- 图片层 -->
+                            <img src="./images/biaotimaisui.png" alt="游戏背景" class="title-background1">
+
+                            <!-- 复用原有标题类 -->
+                            <h2 class="section-title1">热门活动</h2>
+                        </div>
+                        <div class="news-item" onclick="showArticle('article2')">
+                            <div class="date">2023-10-12</div>
+                            <div class="title">休闲游戏设计新趋势分析</div>
+                        </div>
+                        <div class="news-item" onclick="showArticle('article3')">
+                            <div class="date">2023-10-10</div>
+                            <div class="title">独立游戏开发者成功案例分享</div>
+                        </div>
+                        <div class="news-item" onclick="showArticle('article4')">
+                            <div class="date">2023-10-08</div>
+                            <div class="title">游戏引擎技术最新进展</div>
+                        </div>
+                        <div class="news-item" onclick="showArticle('article5')">
+                            <div class="date">2023-10-05</div>
+                            <div class="title">2023年游戏行业投资趋势报告</div>
+                        </div>
+                        <div class="news-item" onclick="showArticle('article6')">
+                            <div class="date">2023-10-03</div>
+                            <div class="title">小游戏变现策略与商业模式探讨</div>
+                        </div>
+                        <div class="news-item" onclick="showArticle('article7')">
+                            <div class="date">2023-10-01</div>
+                            <div class="title">游戏美术设计中的简约主义趋势</div>
+                        </div>
+                        <div class="news-item" onclick="showArticle('article8')">
+                            <div class="date">2023-09-28</div>
+                            <div class="title">游戏音效设计的创新方法</div>
+                        </div>
+                        <div class="news-item" onclick="showArticle('article9')">
+                            <div class="date">2023-09-25</div>
+                            <div class="title">HTML5游戏性能优化技巧</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+    
+    <!-- 文章页面 -->
+    <section id="article" class="page">
+        <div class="games-section">
+            <div class="container">
+                <a href="#" class="back-button" onclick="showPage('news')">
+                    <i class="fas fa-arrow-left"></i> 返回资讯
+                </a>
+                <div class="article-page" id="article-content">
+                    <!-- 文章内容会动态加载到这里 -->
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- 关于我们页面 -->
+    <!-- 顶部英雄区域 -->
+    <section id="about" class="page">
+
+        <div class="about-hero">
+            <div class="container about-hero-content">
+                <h1>关于元气游戏孵化器</h1>
+                <h2>ABOUT about</h2>
+                <p>
+                    元气独立游戏孵化器是元气游戏学堂在2020年底新成立的组织，由about负责协调元气游戏各相关部门的孵化资源，实现高潜独立游戏的全程孵化。帮助独立游戏团队解决难题、提升品质、获得成功，促成游戏行业多元生态的整个发展。
+                </p>
+                <a href="#" class="video-btn">
+                    <i class="fas fa-play-circle"></i>观看视频
+                </a>
+            </div>
+        </div>
+
+        <div class="games-section">
+            <div class="container">
+                <!-- 内容区域 -->
+                <div class="about-content-section">
+                    <div class="container">
+                        <!-- 平台资源升级 -->
+                        <div class="about-two-column">
+                            <!-- 左侧内容 -->
+                            <div class="about-column">
+                                <h2 class="about-section-title">平台资源全新升级</h2>
+                                <h3 class="about-section-subtitle">RESOURCE UPGRADE</h3>
+                                <p class="about-section-content">
+                                about不仅联动了元气内部微信、手Q、应用宝、优量汇等顶级的流量资源，还将联合Appstore、好游快爆、硬核联盟等外部渠道共同为优质游戏发声。
+                                </p>
+                            </div>
+                            
+                            <!-- 右侧内容（分上下两部分） -->
+                            <div class="about-column">
+                                <div class="right-top-section">
+                                    <h2 class="about-section-title">专家资源</h2>
+                                    <h3 class="about-section-subtitle">COMPREHENSIVE SOLUTIONS</h3>
+                                    
+                                    <div class="about-experts">
+                                        <div class="about-expert">
+                                            <div class="about-expert-avatar">C</div>
+                                            <div class="about-expert-name">Cater</div>
+                                            <div class="about-expert-title">《天涯明月刀》制作人</div>
+                                        </div>
+                                        <div class="about-expert">
+                                            <div class="about-expert-avatar">S</div>
+                                            <div class="about-expert-name">Steve</div>
+                                            <div class="about-expert-title">美术总监</div>
+                                        </div>
+                                        <div class="about-expert">
+                                            <div class="about-expert-avatar">J</div>
+                                            <div class="about-expert-name">Jerry</div>
+                                            <div class="about-expert-title">服务器主程</div>
+                                        </div>
+                                        <div class="about-expert">
+                                            <div class="about-expert-avatar">S</div>
+                                            <div class="about-expert-name">Steven</div>
+                                            <div class="about-expert-title">策划总监</div>
+                                        </div>
+                                        <div class="about-expert">
+                                            <div class="about-expert-avatar">B</div>
+                                            <div class="about-expert-name">Basil</div>
+                                            <div class="about-expert-title">元气专家团</div>
+                                        </div>
+                                    </div>                                    
+                                    <p class="about-section-content">元气专家团是元气游戏学堂基于挖掘全球创意游戏，帮助更多创意游戏提升产品品质而建立的官方组织。通过聚合优质专家资源，并根据导师的专业能力提供风险评估、专业指导、前沿探索、行业交流的服务。针对策划、程序、美术多个维度提供具体问题解决方案，全程跟进项目迭代效果。</p>
+                                </div>
+                                
+                                <div class="right-bottom-section">
+                                    <!-- 特性网格 -->
+                                    <div class="about-features-grid">
+                                        <div class="about-feature">
+                                            <h3>大资金支持潜力产品</h3>
+                                            <p>对有商业化潜力的优质独立向产品提供单款可达千万级研发推广资金，解决团队资金难题。</p>
+                                        </div>
+                                        <div class="about-feature">
+                                            <h3>专家团全程解决疑难</h3>
+                                            <p>元气互娱资深专家团协助解决研发运营疑难，根据团队需求随产品全生命周期匹配其他所需资源。</p>
+                                        </div>
+                                        
+                                        <div class="about-feature">
+                                            <h3>内外双开 全力提升游戏流量</h3>
+                                            <p>为达成合作的独立产品提供类比元气自研产品的微信、手Q或WeGame流量支持。提供无封顶金额的买量支持。</p>
+                                        </div>
+                                        
+                                        <div class="about-feature">
+                                            <h3>运营专案 助力增长生命周期</h3>
+                                            <p>根据产品特点制定专属运营方案，解决媒体宣传、社区建设、渠道推广、长期运营等各方面事宜。</p>
+                                        </div>
+                                        <!-- 其他特性... -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="image-with-title">
+                            <!-- 图片层 -->
+                            <img src="./images/logoshuiyin.png" alt="游戏背景" class="title-background">
+
+                            <!-- 复用原有标题类 -->
+                            <h2 class="section-title">联系我们</h2>
+                        </div>
+
+
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; max-width: 1000px; margin: 0 auto;">
+                            <div class="page-content">
+                                <h3 style="margin-bottom: 20px; color: var(--accent);">联系方式</h3>
+                                
+                                <div style="margin-bottom: 25px;">
+                                    <h4 style="display: flex; align-items: center; margin-bottom: 10px;">
+                                        <i class="fas fa-envelope" style="color: var(--accent); margin-right: 10px;"></i>
+                                        电子邮件
+                                    </h4>
+                                    <p>contact@gameworkshop.com</p>
+                                </div>
+                                
+                                <div style="margin-bottom: 25px;">
+                                    <h4 style="display: flex; align-items: center; margin-bottom: 10px;">
+                                        <i class="fas fa-phone" style="color: var(--accent); margin-right: 10px;"></i>
+                                        电话
+                                    </h4>
+                                    <p>+86 123 4567 8910</p>
+                                </div>
+                                
+                                <div style="margin-bottom: 25px;">
+                                    <h4 style="display: flex; align-items: center; margin-bottom: 10px;">
+                                        <i class="fas fa-map-marker-alt" style="color: var(--accent); margin-right: 10px;"></i>
+                                        地址
+                                    </h4>
+                                    <p>北京市海淀区科技园区88号创新大厦</p>
+                                </div>
+                                
+                                <div>
+                                    <h4 style="display: flex; align-items: center; margin-bottom: 15px;">
+                                        <i class="fas fa-share-alt" style="color: var(--accent); margin-right: 10px;"></i>
+                                        关注我们
+                                    </h4>
+                                    <div class="social-links">
+                                        <a href="#"><i class="fab fa-weibo"></i></a>
+                                        <a href="#"><i class="fab fa-weixin"></i></a>
+                                        <a href="#"><i class="fab fa-qq"></i></a>
+                                        <a href="#"><i class="fab fa-github"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="page-content">
+                                <h3 style="margin-bottom: 20px; color: var(--accent);">发送消息</h3>
+                                <div id="form-message" class="form-message"></div>
+                                <form id="contact-form">
+                                    <div class="form-group">
+                                        <label for="name">您的姓名</label>
+                                        <input type="text" id="name" name="name" required>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="email">电子邮件</label>
+                                        <input type="email" id="email" name="email" required>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="subject">主题</label>
+                                        <input type="text" id="subject" name="subject" required>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="contact-type">联系类型</label>
+                                        <select id="contact-type" name="contact-type" required>
+                                            <option value="">请选择联系类型</option>
+                                            <option value="cooperation">商业合作</option>
+                                            <option value="job">求职/简历投递</option>
+                                            <option value="feedback">产品反馈</option>
+                                            <option value="other">其他</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="message">消息内容</label>
+                                        <textarea id="message" name="message" required></textarea>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label>上传作品/简历 (可选)</label>
+                                        <input type="file" id="attachment" name="attachment">
+                                    </div>
+                                    
+                                    <button type="submit" class="btn" style="width: 100%;">发送消息</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>   
+            </div> 
+        </div> 
+                
+    </section>
+
+
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column1">
+                <a href="#" class="logo2" onclick="showPage('home')">
+                    <img src="./images/tuziLogo1.png" alt="游戏工坊" class="logo2-img">
+                </a>
+                    <p style="margin-bottom: 20px;">创造有趣、创新、引人入胜的游戏体验</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-weibo"></i></a>
+                        <a href="#"><i class="fab fa-weixin"></i></a>
+                        <a href="#"><i class="fab fa-qq"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+
+                </div>
+                
+
+                <div class="footer-column">
+                    <h3>快速链接</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" onclick="showPage('home')">首页</a></li>
+                        <li><a href="#" onclick="showPage('games')">游戏项目</a></li>
+                        <li><a href="#" onclick="showPage('club')">俱乐部</a></li>
+                        <li><a href="#" onclick="showPage('news')">行业资讯</a></li>
+                        <li><a href="#" onclick="showPage('about')">关于我们</a></li>
+                        <li><a href="#" onclick="showPage('contact')">联系我们</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>热门游戏</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" onclick="showGameDetail('space-odyssey')">太空漫游</a></li>
+                        <li><a href="#" onclick="showGameDetail('jungle-jump')">丛林跳跃</a></li>
+                        <li><a href="#" onclick="showGameDetail('puzzle-master')">解谜大师</a></li>
+                        <li><a href="#" onclick="showGameDetail('dragon-arena')">龙之竞技场</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>订阅更新</h3>
+                    <p style="margin-bottom: 15px;">订阅我们的通讯，获取最新游戏和活动信息</p>
+                    <form style="display: flex;">
+                        <input type="email" placeholder="您的电子邮箱" style="flex: 1; padding: 10px; border-radius: 5px 0 0 5px; border: none; background: rgba(255, 255, 255, 0.15); color: white;">
+                        <button type="submit" style="background: var(--accent); color: white; border: none; padding: 0 15px; border-radius: 0 5px 5px 0; cursor: pointer;">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                    <a class="logo2" >
+                        <img src="./images/weixin.jpg" alt="游戏工坊" class="logo2-img">
+                    </a>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 游戏工坊. 保留所有权利。 | 京ICP备12345678号</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 游戏详情模态框 -->
+    <div id="game-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-close" onclick="closeGameModal()">
+                <i class="fas fa-times"></i>
+            </div>
+            <div class="game-header">
+                <div class="game-poster">
+                    <div id="game-poster-image" style="height: 400px; background: url('https://images.unsplash.com/photo-1534423861386-85a16f5d13fd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80') center/cover;"></div>
+                </div>
+                <div class="game-overview">
+                    <h1 id="game-title">太空漫游</h1>
+                    <p id="game-description">《太空漫游》是一款令人兴奋的太空探险游戏。在游戏中，你将扮演一名勇敢的宇航员，驾驶飞船穿越未知的星系。你的任务是收集散落在宇宙中的能量晶体，同时躲避危险的陨石和小行星。</p>
+                    
+                    <div class="game-meta">
+                        <div class="meta-item"><i class="fas fa-calendar"></i> 发布日期: <span id="game-date">2023-06-15</span></div>
+                        <div class="meta-item"><i class="fas fa-download"></i> 下载量: <span id="game-downloads">12,548</span></div>
+                        <div class="meta-item"><i class="fas fa-star"></i> 评分: <span id="game-rating">4.8/5</span></div>
+                        <div class="meta-item"><i class="fas fa-gamepad"></i> 类型: <span id="game-type">休闲/探险</span></div>
+                    </div>
+                    
+                    <p>游戏特色：</p>
+                    <ul id="game-features" style="padding-left: 20px; margin: 15px 0;">
+                        <li>5个独特的星系，超过50个关卡</li>
+                        <li>12种不同类型的飞船可供解锁</li>
+                        <li>丰富的成就系统和每日任务</li>
+                        <li>支持多人合作模式</li>
+                        <li>精美的太空视觉效果和音效</li>
+                    </ul>
+                    
+                    <a href="https://example.com/game1" class="btn" target="_blank">立即试玩 <i class="fas fa-play"></i></a>
+                    <a href="https://example.com/download/game1" class="btn" style="background: var(--primary); margin-left: 10px;">下载游戏 <i class="fas fa-download"></i></a>
+                </div>
+            </div>
+            
+            <div style="padding: 0 40px 40px;">
+                <h2 style="margin: 40px 0 20px;">游戏截图</h2>
+                <!-- 修改为横向滑动布局 -->
+                <div class="screenshots-container">
+                    <div class="screenshot">
+                        <div style="height: 200px; background: url('https://images.unsplash.com/photo-1534447677768-be436bb09401?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80') center/cover;"></div>
+                    </div>
+                    <div class="screenshot">
+                        <div style="height: 200px; background: url('https://images.unsplash.com/photo-1547700055-b61cacebece9?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80') center/cover;"></div>
+                    </div>
+                    <div class="screenshot">
+                        <div style="height: 200px; background: url('https://images.unsplash.com/photo-1465101162946-4377e57745c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80') center/cover;"></div>
+                    </div>
+                    <div class="screenshot">
+                        <div style="height: 200px; background: url('https://images.unsplash.com/photo-1505506874110-6a7a69069a08?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80') center/cover;"></div>
+                    </div>
+                    <div class="screenshot">
+                        <div style="height: 200px; background: url('https://images.unsplash.com/photo-1531074620806-2b6802dce1a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80') center/cover;"></div>
+                    </div>
+                    <div class="screenshot">
+                        <div style="height: 200px; background: url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80') center/cover;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="particles-js"></div>
+
+<!-- 社交按钮组 -->
+<div class="social-bar">
+    <div class="social-group">
+        <a class="fab fa-weixin fa-2x" title="微信" data-qrcode="./images/weixin.jpg">
+            <div class="qrcode-tooltip">
+                    <div class="qrcode-text">微信</div>
+            </div> 
+        </a>
+
+        <a class="fab fa-qq fa-2x" title="QQ" data-qrcode="https://example.com/qr/qq">
+            <div class="qrcode-tooltip"></div>
+        </a>
+
+        <a class="fab fa-weibo fa-2x" title="微博" data-qrcode="https://example.com/qr/douyin">
+            <div class="qrcode-tooltip"></div>
+        </a>
+    </div>
+    <a href="#" class="back-to-top fa fa-rocket fa-2x" title="返回顶部"></a>
+
+</div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
